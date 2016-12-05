@@ -101,9 +101,15 @@ You get it. It's a bunch of stars on the sidewalk. This project focuses on how t
 
 <p>A network has certain characteristics like average degree, degree distribution and connectedness. Further network analysis like detecting and examining communities or centrality measures will be included in the project. For now let's take a look at the basic network properties for the Hollywood star network.  </p>
 
-<p>The degree of a node means how many connections it has to other nodes. This tells us something about how connected the network is. It can also give us an idea of what to expect for how many connections famous stars, the average stars and the least famous stars should have. The network is directed but the average degree will be calculated on the equivalent undirected graph. We could count the degree for each node and take the average, but a faster way of finding the average degree is this small equation.</p>
+<p>The degree of a node means how many connections it has to other nodes. This tells us something about how connected the network is. It can also give us an idea of what to expect for how many connections famous stars, the average stars and the least famous stars should have. The average degree of the network is 18.605, which means the average star has 18-19 connections to other stars on their wikipages. Our STAR of the stars should there have higher degree than this.  </p>
 
-<p>$$\textrm{Avg. degree}=\frac{2·\textrm{edges}}{\textrm{nodes}}$$</p>
+<p>Considering that nodes on average have edges to 18 other nodes means that the network is strongly connected. We are dealing with a giant component where many stars are connected and a fraction is not included. It is possible to move from one node to another in the strongly connected big component using only few steps. This property resembles <a href="https://en.wikipedia.org/wiki/Six_degrees_of_separation">Six degrees of separation</a>.</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/TobiasSlott/SocialGraphs/master/Hollywood_Graph.png" width="300">
+</p>
+
+<p>Most of the stars are then to each other, but what causes the high average degree. Are some stars simply connected to all or is number of connections evenly spread out. The degree distribution will clarify this.</p>
 
 <ul>
 <li>Network theory, degree, centrality, community</li>
@@ -165,16 +171,6 @@ The considered awards are:</p>
 <a id="detailed-analysis" class="anchor" href="#detailed-analysis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Detailed analysis</h3>
 
 <p>The actual analysis in this project is done in an iPython notebook which can be seen here.</p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can @mention a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/TobiasSlott/SocialGraphs">Hollywood Walk of Fame</a> is maintained by <a href="https://github.com/TobiasSlott">TobiasSlott</a>.</span>
