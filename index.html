@@ -75,7 +75,7 @@ You get it. It's a bunch of stars on the sidewalk. This project focuses on how t
   <img src="https://raw.githubusercontent.com/TobiasSlott/SocialGraphs/master/simple_graph.png" width="300">
 </p>
 
-<p>The list of all stars on the Hollywood Walk of Fame can be downloaded from Wikipedia. Now that we have the network's nodes we want to connect them. This is done by looking at the individual Wikipedia pages of the stars and see what other stars they link to. If there is a link from one star to another on the Hollywood Walk of Fame there will be an edge between the nodes. The edges will be directed, meaning they are pointing one way. For example one of the first links on the wikipage of our good friend <a href="https://en.wikipedia.org/wiki/Samuel_L._Jackson">Samuel L. Jackson</a> is <a href="https://en.wikipedia.org/wiki/Quentin_Tarantino">Quentin Tarantino</a> (take a look yourself), because they have collaborated many times in motion pictures. In fact there is also a link from Tarantino's wikipage to Sam Jackson, so in the network there is an edge from Jackson to Tarantino and another edge from Tarantino to Jackson.</p>
+<p>The list of all stars on the Hollywood Walk of Fame can be downloaded from Wikipedia and we can also see what category the stars are in. Now that we have the network's nodes we want to connect them. This is done by looking at the individual Wikipedia pages of the stars and see what other stars they link to. If there is a link from one star to another on the Hollywood Walk of Fame there will be an edge between the nodes. The edges will be directed, meaning they are pointing one way. For example one of the first links on the wikipage of our good friend <a href="https://en.wikipedia.org/wiki/Samuel_L._Jackson">Samuel L. Jackson</a> is <a href="https://en.wikipedia.org/wiki/Quentin_Tarantino">Quentin Tarantino</a> (take a look yourself), because they have collaborated many times in motion pictures. In fact there is also a link from Tarantino's wikipage to Sam Jackson, so in the network there is an edge from Jackson to Tarantino and another edge from Tarantino to Jackson.</p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/TobiasSlott/SocialGraphs/master/quentin_star.png" width="240">
@@ -83,11 +83,8 @@ You get it. It's a bunch of stars on the sidewalk. This project focuses on how t
   <img src="https://raw.githubusercontent.com/TobiasSlott/SocialGraphs/master/sam_star.png" width="180">
 </p>
 
-<ul>
-<li>Nodes and edges and attributes</li>
-</ul>
-
-<p>An edge can represent many things in this network friendship, marriage, collaboration, etc., and there are many edges. The most most famous and influential star must have appear in many wikipages and so will have many edges in the network.
+<p>The network contains 2296 nodes connected by 25130 so it's exactly what you would call small... The many edges means that some stars are mentioned a lot in wikipages probably because they are big an influential stars. Every node in the network will be a name of a Hollywood celebrity, have the Hollywood star category, and it will also have number as a node attribute. The Hollywood stars have a knack for gaining recognition and fame because of the many award shows they host. The most talented receive awards, this will help tell us who is the STAR of the stars. The node attributes therefore is the number of awards the star has received.<br>
+An edge can represent many things in this network friendship, marriage, collaboration, etc., and there are many edges. The most most famous and influential star must have appear in many wikipages and so will have many edges in the network.
 On wikipedia you can reach any page within 5 steps... (?)</p>
 
 <ul>
