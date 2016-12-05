@@ -75,15 +75,27 @@ You get it. It's a bunch of stars on the sidewalk. This project focuses on how t
   <img src="https://raw.githubusercontent.com/TobiasSlott/SocialGraphs/master/simple_graph.png" width="300">
 </p>
 
+<p>The list of all stars on the Hollywood Walk of Fame can be downloaded from Wikipedia. Now that we have the network's nodes we want to connect them. This is done by looking at the individual Wikipedia pages of the stars and see what other stars they link to. If there is a link from one star to another on the Hollywood Walk of Fame there will be an edge between the nodes. The edges will be directed, meaning they are pointing one way. For example one of the first links on the wikipage of our good friend <a href="https://en.wikipedia.org/wiki/Samuel_L._Jackson">Samuel L. Jackson</a> is <a href="https://en.wikipedia.org/wiki/Quentin_Tarantino">Quentin Tarantino</a> (take a look yourself), because they have collaborated many times in motion pictures. In fact there is also a link from Tarantino's wikipage to Sam Jackson, so in the network there is an edge from Jackson to Tarantino and another edge from Tarantino to Jackson.</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/TobiasSlott/SocialGraphs/master/quentin_star.png" width="360">
+  <img src="https://raw.githubusercontent.com/TobiasSlott/SocialGraphs/master/sam_quentin_star.png" width="360">
+  <img src="https://raw.githubusercontent.com/TobiasSlott/SocialGraphs/master/sam_star.png" width="360">
+</p>
+
 <ul>
 <li>Nodes and edges and attributes</li>
+</ul>
+
+<p>An edge can represent many things in this network friendship, marriage, collaboration, etc., and there are many edges. The most most famous and influential star must have appear in many wikipages and so will have many edges in the network.
+On wikipedia you can reach any page within 5 steps... (?)</p>
+
+<ul>
 <li>Network theory, degree, centrality, community</li>
 <li>Graph statistics</li>
 <li>Graph plots</li>
 <li>Degree distribution</li>
 </ul>
-
-<p>On wikipedia you can reach any page within 5 steps... (?)</p>
 
 <h3>
 <a id="project-overview" class="anchor" href="#project-overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project overview</h3>
@@ -127,7 +139,7 @@ You get it. It's a bunch of stars on the sidewalk. This project focuses on how t
 <h3>
 <a id="data-from-wikipedia" class="anchor" href="#data-from-wikipedia" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data from Wikipedia</h3>
 
-<p>There are plenty of information on Hollywood celebrities on Wikipedia. Since the basis for the project is <a href="https://en.wikipedia.org/wiki/List_of_fictional_characters_with_stars_on_the_Hollywood_Walk_of_Fame">list of stars on the Hollywood Walk of Fame</a> found on Wikipedia it makes sense to also download their individual wikipages while we are at it.</p>
+<p>There are plenty of information on Hollywood celebrities on Wikipedia. Since the basis for the project is the <a href="https://en.wikipedia.org/wiki/List_of_fictional_characters_with_stars_on_the_Hollywood_Walk_of_Fame">list of stars on the Hollywood Walk of Fame</a> found on Wikipedia it makes sense to also download their individual wikipages while we are at it.</p>
 
 <p>We are also looking at awards ....
 The considered awards are:</p>
