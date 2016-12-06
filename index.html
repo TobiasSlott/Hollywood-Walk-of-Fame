@@ -220,12 +220,20 @@ You get it. It's a bunch of stars on the sidewalk. This project focuses on how t
 <li>Mae West: 0.299297680633</li>
 </ol>
 
+<p>KONKLUSION HER!!!!!</p>
+
 <h3>
 <a id="community-detection" class="anchor" href="#community-detection" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Community detection</h3>
 
-<p>Now it's time to look at the stars and see if they group up in nice ways, kind of like looking at stars in the sky and finding the Big Dipper. In the project the best partition of the network is found with an algorithm designed for exactly this, but it might also be fascinating to know if the network can be divided into groups that we have proposed. We might be able to answer about the Hollywood Walk of Fame network such as... Can we see communities based on the categorisation (actors with actors, singers with singers, etc.)? Is their a group of stars with awards and a group of the more unfortunate stars without? Can we detect a community of fictional characters? We can look at the modularity to see if communities makes sense. Modularity measure the strength of division of a network into groups.</p>
+<p>Now it's time to look at the stars and see if they group up in nice ways, kind of like looking at stars in the sky and finding the Big Dipper. In the project the best partition of the network is found with an algorithm designed for exactly this, but it might also be fascinating to know if the network can be divided into groups that we have proposed. We might be able to answer about the Hollywood Walk of Fame network such as... Can we see communities based on the categorisation (actors with actors, singers with singers, etc.)? Is their a group of stars with awards and a group of the more unfortunate stars without? We can look at the modularity to see if communities makes sense. Modularity measure the strength of division of a network into groups.</p>
 
-<p>First up is the best partition which can be found using the Python Louvain algorithm. The groups of stars we get from this is the so-called best partition. It appears the we have some lonely celebrities because the best partition 108 groups and 97 of these are groups of 1. A couple of the groups contain a more reasonable number of stars, 404, 401, 612, 368, 269, 22, 55 and 62. Later we can use text analysis to see what kind of stars are in the different groups. For now let's just mention that the best partition has a modularity of 0.786.</p>
+<p>First up is the best partition which can be found using the Python Louvain algorithm. The groups of stars we get from this is the so-called best partition. It appears the we have some lonely celebrities because the best partition 108 groups and 97 of these are groups of 1. A couple of the groups contain a more reasonable number of stars, 404, 401, 612, 368, 269, 22, 55 and 62. Later we can use text analysis to see what kind of stars are in the different groups. For now let's just mention that the best partition has a modularity of 0.786. We can show the network where the colour of each node indicates what group it is part of.</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/TobiasSlott/SocialGraphs/master/Hollywood_Graph_partition.png" width="690">
+</p>
+
+<p>There definitely groups with more nodes in them, and these groups also seem to part of the giant component.</p>
 
 <p>In order to look for a Categorisation community the categories for each star is needed. Luckily these are included in the Wikipedia list of Hollywood Walk of Fame stars. This is how the stars get partitioned.</p>
 
@@ -234,11 +242,19 @@ You get it. It's a bunch of stars on the sidewalk. This project focuses on how t
 <li>Broadcast television: 483</li>
 <li>Audio recording: 420</li>
 <li>Broadcast radio: 188</li>
-<li>Theatre/Live performance: 44</li>
+<li>Theatre/Live performance: 44
+This partition has a modularity of 0.570. So even though the stars actually have categories, they can be partitioned better as seen above and thereby get a higher modularity.</li>
 </ul>
 
-<h4>
-<a id="create-proposed-communities" class="anchor" href="#create-proposed-communities" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Create proposed communities</h4>
+<p>It is easy to divide the network into a group of award winning stars and the rest, we can simply look at the node attributes. This is how the stars get partitioned.</p>
+
+<ul>
+<li>Awards: 1673</li>
+<li>No awards: 623
+This partition has a modularity of 0.495. Admitted, it gives more sense to test the category partition, but not much needed to be added to test this partition since we already have the node attributes.</li>
+</ul>
+
+<p>KONKLUSION HER!!!!!!!!</p>
 
 <h3>
 <a id="plain-text-analysis" class="anchor" href="#plain-text-analysis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Plain text analysis</h3>
@@ -259,6 +275,8 @@ You get it. It's a bunch of stars on the sidewalk. This project focuses on how t
 <h4>
 <a id="fictional-characters-community" class="anchor" href="#fictional-characters-community" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fictional characters community</h4>
 
+<p>Can we detect a community of fictional characters?</p>
+
 <h3>
 <a id="data-from-wikipedia" class="anchor" href="#data-from-wikipedia" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data from Wikipedia</h3>
 
@@ -277,6 +295,9 @@ The considered awards are:</p>
 <li>Grammy Awards (Recording): <a href="https://en.wikipedia.org/wiki/Grammy_Award_for_Album_of_the_Year">Album of the Year</a>, <a href="https://en.wikipedia.org/wiki/Grammy_Award_for_Record_of_the_Year">Record of the Year</a>, <a href="https://en.wikipedia.org/wiki/Grammy_Award_for_Song_of_the_Year">Song of the Year</a>, <a href="https://en.wikipedia.org/wiki/Grammy_Award_for_Best_New_Artist">Best New Artist</a>
 </li>
 </ul>
+
+<h3>
+<a id="download-the-data" class="anchor" href="#download-the-data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Download the data</h3>
 
 <h3>
 <a id="detailed-analysis" class="anchor" href="#detailed-analysis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Detailed analysis</h3>
