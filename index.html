@@ -122,8 +122,9 @@ You get it. It's a bunch of stars on the sidewalk. This project focuses on how t
 
 <p>The STAR of stars will be a central part of the network. But what exactly does that mean? This page has mentioned a couple of times that the most famous and influential stars are the ones with the highest number of links. This is just one measure of centrality in a network called Degree centrality. 4 different centrality measures are examined in the project's network analysis. This can give us a great clue to which stars we should take our picture with! Now let's find the top 10 stars for each centrality measure.  </p>
 
-<p>The first measure is the Degree centrality. Since the network is directed There are two top 10s for this measure, one for stars with most ingoing edges and one for stars most outgoing edges.<br>
-Top 10 Hollywood Stars by in-degree:</p>
+<p>The first measure is the Degree centrality. Since the network is directed There are two top 10s for this measure, one for stars with most ingoing edges and one for stars most outgoing edges.</p>
+
+<p>Top 10 Hollywood Stars by in-degree:</p>
 
 <ol>
 <li>Frank Sinatra: 209</li>
@@ -151,6 +152,72 @@ Top 10 Hollywood Stars by in-degree:</p>
 <li>James Stewart: 180</li>
 <li>John Wayne: 178</li>
 <li>Clark Gable: 177</li>
+</ol>
+
+<p>The measure of centrality is Betweenness centrality. Betweenness centrality is a measure of how much does a node appear in shortest paths of the graph. For the Hollywood star network this means that stars with high betweenness centrality have a central role for most other stars as they connect many them together. Low betweenness centrality means that your Wikipedia page does not have to be visited as much to navigate the network.</p>
+
+<p>Top 10 stars by betweenness centrality:</p>
+
+<ol>
+<li>Frank Sinatra: 0.0468845426201</li>
+<li>Bing Crosby: 0.0197847309576</li>
+<li>Elvis Presley: 0.0186038740812</li>
+<li>John Ford: 0.01854986309</li>
+<li>Cary Grant: 0.0179541950359</li>
+<li>Bette Davis: 0.0154747766626</li>
+<li>Barbra Streisand: 0.0146693888956</li>
+<li>Gary Cooper: 0.01464187824</li>
+<li>Clark Gable: 0.0146325770905</li>
+<li>Dean Martin: 0.0144237619484</li>
+</ol>
+
+<p>Next up is Eigenvector centrality. This is not a simple measure of how many in- and out-going edges a node has, but rather how connected it is to other nodes that are connected to each other. So if many nodes are all connected to each other the eigenvector centrality will be high for them, while if a nodes is connected to other nodes that are not connected then the eigenvector centrality will low. Stars out in the cold be themselves will be at the bottom of this list. Eigenvector centrality can be calculated for ingoing- and outgoing edges so we get two top 10s.</p>
+
+<p>Top 10 stars by eigenvector centrality for in-degree:</p>
+
+<ol>
+<li>Frank Sinatra: 0.176210790305</li>
+<li>Clark Gable: 0.151450535772</li>
+<li>Katharine Hepburn: 0.150112705248</li>
+<li>Cary Grant: 0.148403951492</li>
+<li>James Stewart: 0.144565609714</li>
+<li>Bette Davis: 0.14118247057</li>
+<li>Ronald Reagan: 0.137370315083</li>
+<li>Humphrey Bogart: 0.132940054506</li>
+<li>Gary Cooper: 0.127672013335</li>
+<li>Joan Crawford: 0.11866559248</li>
+</ol>
+
+<p>Top 10 stars by eigenvector centrality for out-degree:</p>
+
+<ol>
+<li>George Cukor: 0.178118739679</li>
+<li>John Ford: 0.144537412388</li>
+<li>George Raft: 0.140237847483</li>
+<li>James Stewart: 0.138821082299</li>
+<li>Gary Cooper: 0.128352026294</li>
+<li>Humphrey Bogart: 0.125581100395</li>
+<li>Cary Grant: 0.12156496433</li>
+<li>Howard Hawks: 0.1203120006</li>
+<li>Michael Curtiz: 0.119999232333</li>
+<li>Clark Gable: 0.11813353565</li>
+</ol>
+
+<p>Do we start to see any recurring names? Let's look at the fourth centrality measure to be sure. It is Closeness centrality which is calculated as the sum of the length of the shortest paths between the node and all other nodes in the graph.</p>
+
+<p>Top 10 stars by closeness centrality:</p>
+
+<ol>
+<li>Frank Sinatra: 0.311262336552</li>
+<li>George Cukor: 0.309512618539</li>
+<li>Cary Grant: 0.309202236851</li>
+<li>James Stewart: 0.309016306462</li>
+<li>George Raft: 0.307046873719</li>
+<li>Michael Curtiz: 0.306924617348</li>
+<li>John Ford: 0.306436563892</li>
+<li>Howard Hawks: 0.304379536612</li>
+<li>Gary Cooper: 0.300757384499</li>
+<li>Mae West: 0.299297680633</li>
 </ol>
 
 <h3>
