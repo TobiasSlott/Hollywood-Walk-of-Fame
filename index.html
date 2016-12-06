@@ -221,17 +221,31 @@ You get it. It's a bunch of stars on the sidewalk. This project focuses on how t
 </ol>
 
 <h3>
-<a id="community-detection-and-analysis" class="anchor" href="#community-detection-and-analysis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Community detection and analysis</h3>
+<a id="community-detection" class="anchor" href="#community-detection" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Community detection</h3>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/TobiasSlott/SocialGraphs/master/word_cloud_all.png" width="1000">
-</p>
+<p>Now it's time to look at the stars and see if they group up in nice ways, kind of like looking at stars in the sky and finding the Big Dipper. In the project the best partition of the network is found with an algorithm designed for exactly this, but it might also be fascinating to know if the network can be divided into groups that we have proposed. We might be able to answer about the Hollywood Walk of Fame network such as... Can we see communities based on the categorisation (actors with actors, singers with singers, etc.)? Is their a group of stars with awards and a group of the more unfortunate stars without? Can we detect a community of fictional characters? We can look at the modularity to see if communities makes sense. Modularity measure the strength of division of a network into groups.</p>
+
+<p>First up is the best partition which can be found using the Python Louvain algorithm. The groups of stars we get from this is the so-called best partition. It appears the we have some lonely celebrities because the best partition 108 groups and 97 of these are groups of 1. A couple of the groups contain a more reasonable number of stars, 404, 401, 612, 368, 269, 22, 55 and 62. Later we can use text analysis to see what kind of stars are in the different groups. For now let's just mention that the best partition has a modularity of 0.786.</p>
+
+<p>In order to look for a Categorisation community the categories for each star is needed. Luckily these are included in the Wikipedia list of Hollywood Walk of Fame stars. This is how the stars get partitioned.</p>
+
+<ul>
+<li>Motion picture: 1125</li>
+<li>Broadcast television: 483</li>
+<li>Audio recording: 420</li>
+<li>Broadcast radio: 188</li>
+<li>Theatre/Live performance: 44</li>
+</ul>
 
 <h4>
 <a id="create-proposed-communities" class="anchor" href="#create-proposed-communities" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Create proposed communities</h4>
 
 <h3>
 <a id="plain-text-analysis" class="anchor" href="#plain-text-analysis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Plain text analysis</h3>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/TobiasSlott/SocialGraphs/master/word_cloud_all.png" width="1000">
+</p>
 
 <h4>
 <a id="similarity-ideas" class="anchor" href="#similarity-ideas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Similarity ideas</h4>
